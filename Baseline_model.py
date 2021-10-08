@@ -15,10 +15,10 @@ from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 from sklearn import datasets, metrics, model_selection, svm
 from visualisation import plot_roc_curve
 
-train_brut = pd.read_csv(r'C:\Users\quang-chuc.nguyen\Documents\Python\1 Credit scoring\train.csv')
+train_brut = pd.read_csv(r'C:\Users\quang-chuc.nguyen\Python\1 Credit scoring\train.csv')
 y = train_brut['label']
 train_brut = train_brut.drop(['label'], axis=1)
-test_brut = pd.read_csv(r'C:\Users\quang-chuc.nguyen\Documents\Python\1 Credit scoring\test.csv')
+test_brut = pd.read_csv(r'C:\Users\quang-chuc.nguyen\Python\1 Credit scoring\test.csv')
 data = pd.concat(objs=[train_brut,test_brut], axis=0)
 
 num_features = ['age_source1', 'age_source2', 'FIELD_3',
